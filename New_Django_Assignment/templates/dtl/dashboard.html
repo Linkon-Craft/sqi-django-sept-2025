@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Dashboard</title>
+</head>
+<body>
+    <!-- 1. Basic Variables -->
+    <h1>Ibadan Central Library</h1>
+    <p>Librarian: {{ librarian | title }}</p>
+    <p>Today's Date: {{ current_date|date:"l, j F Y" }}.</p>
+    <h3>Discover African Literature Classics!</h3>
+
+    <!-- 2. Conditional Greeting -->
+        {% if is_weekend %}
+    <h2>Welcome to a new weekend at the library!</h2>
+        {% else %}
+    <h2>Welcome to a new weekday at the library!</h2>
+        {% endif %}
+    <!-- 3. Books List -->
+    <h2>Books Collection</h2>
+    <ul>
+        {% for book in books %}
+        <li>
+         <h2>..............................................................................................</h2>
+            <h2>Title: {{ book.title }}</h2>
+            <h4>Author: {{ book.author }}</h4>
+            <h4>Publication Year: {{ book.publication_year }}</h4> 
+            <h4>Category: {{ book.category }}</h4><!-- TODO: Show author, publication year, and category -->
+            <p>ISBN: {{ book.isbn }}</p><!-- TODO: Show ISBN -->
+            <p>Price: #{{ book.price  }}</p><!-- TODO: Show price formatted as currency -->
+            {% if book.available_copies > 0 %}
+                <p>Available: ({{ book.available_copies }} Copies)</p>
+            {% else %}
+                <p>Out of stock</p>
+            {% endif %}     <!-- TODO: If available_copies > 0, show availability, else "Out of Stock" -->
+
+            {% if book.is_featured %}
+                <p>FEATURED</p>
+            {% else %}
+                <p> UNFEATURED </p>
+            {% endif %}
+            <!-- TODO: If book is_featured, show "FEATURED" -->
+             
+        </li>
+        {% endfor %}
+    </ul>
+
+    <!-- 4. Library Statistics -->
+    <h2>Library Statistics</h2>
+    <ul>
+        <p>-Total Members: {{ library_stats.total_members }}</p><!-- TODO: Show total_members -->
+        <p>-Books Borrowed Today: {{ library_stats.books_borrowed_today }} </p><!-- TODO: Show books_borrowed_today -->
+        <p>-Overdue Books: {{ library_stats.overdue_books }}</p><!-- TODO: Show overdue_books -->
+        <p>-New Arrivals This Month: {{ library_stats.new_arrivals_this_month }}</p><!-- TODO: Show new_arrivals_this_month -->
+    </ul>
+</body>
+</html>
