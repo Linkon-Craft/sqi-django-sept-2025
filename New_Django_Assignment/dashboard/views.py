@@ -62,5 +62,5 @@ def dashboard(request):
         "is_weekend": timezone.now().weekday() >= 5,
         "featured_message": "Discover African Literature Classics!"
     }
-    return render(request, 'dashboard.html', context)
+    return render(request, 'dtl/dashboard.html', context)
 
