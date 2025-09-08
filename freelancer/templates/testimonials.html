@@ -1,0 +1,13 @@
+{% extends "patials\base.html" %}
+{% block title %}
+ 
+{% endblock title %}
+
+{% block body %}
+    <h1>What Our Customers Say</h1>
+    <ul>
+        {% for name, message in testimonials.items %}
+            <li><strong>{{ name }}</strong>: "{{ message }}"</li>
+        {% endfor %}
+    </ul>
+{% endblock body %}

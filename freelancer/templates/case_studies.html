@@ -1,0 +1,16 @@
+{% extends "patials\base.html" %}
+
+{% block title %}
+
+{% endblock title %} 
+
+{% block body %}
+    <h1>Case Studies</h1>
+    {% for study in studies %}
+        <div style="border:1px solid #ddd; padding:10px; margin:10px 0; background:#f9f9f9;">
+            <h2>{{ study.title }}</h2>
+            <p>{{ study.summary }}</p>
+        </div>
+    {% endfor %}
+{% endblock body %}
+

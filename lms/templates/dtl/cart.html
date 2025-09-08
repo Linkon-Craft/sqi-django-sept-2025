@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Shopping Cart</title>
-</head>
-<body>
-     
-    <h2> Hello {{ customer | upper }}</h2>
+{% extends "partials\base.html" %}  
+   
+{% block title %}
+   Shopping Cart
+{% endblock title %} 
+
+
+{% block header %}
+
+{% endblock header %}
+
+{% block body %}
+   <h2> Hello {{ customer | upper }}</h2>
 
     <!-- 2. Cart Items -->
     <h3>Your Cart</h3>
@@ -43,5 +47,9 @@
     <!-- 5. Filters -->
     <p>Today is: {{ today|date:"l, j F Y" }}.</p>
     <p>Total different items in cart: {{ cart_items | length }}</p>
-</body>
-</html>
+{% endblock body %}
+
+{% block footer %}
+
+
+{% endblock footer %}

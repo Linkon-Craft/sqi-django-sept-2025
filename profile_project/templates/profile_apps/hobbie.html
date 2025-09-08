@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hobbies</title>
-</head>
-<body>
-    <div>
+{% extends "partials/base.html" %}
+{% block title %}
+Hobbies
+{% endblock title %} 
+
+{% block body %}
+<div>
     <h3>My Hobbies</h3>
     <ul>
         <li>Reading books</li>
@@ -14,5 +12,4 @@
         <li>Photography</li>
     </ul>
 </div>
-</body>
-</html>
+{% endblock body %}

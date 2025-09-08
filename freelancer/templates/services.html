@@ -1,0 +1,14 @@
+{% extends "patials\base.html" %}
+   
+{% block titile %}
+{% endblock titile %}
+
+{% block body %}
+    <h1>Services We Offer</h1>
+    <ul>
+        {% for service in services %}
+            <li>{{ service }}</li>
+        {% endfor %}
+    </ul>
+{% endblock body %}
+
