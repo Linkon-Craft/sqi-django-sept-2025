@@ -1,11 +1,16 @@
 {% extends "patials\base.html" %}
+{% load static %}
    
 {% block titile %}
 {% endblock titile %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css\services.css' %}">
+{% endblock extra_css %}
+
 {% block body %}
     <h1>Services We Offer</h1>
-    <ul>
+    <ul class="services-list">
         {% for service in services %}
             <li>{{ service }}</li>
         {% endfor %}

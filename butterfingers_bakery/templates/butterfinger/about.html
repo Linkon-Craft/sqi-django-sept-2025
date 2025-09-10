@@ -1,0 +1,36 @@
+{% extends "partials/base.html" %}
+{% load static %}
+
+{% block title %}
+<title>About Us</title>
+{% endblock title %} 
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<section class="about-hero">
+    <div class="about-hero-content">
+        <img src="{% static 'images/butterfinger_logo.png' %}" alt="Butterfingers Logo">
+        <h1>How We Bake A Difference at Butterfingers Bakery</h1>
+    </div>
+</section>
+
+<section class="about-story">
+    <div class="story-image">
+        <img src="{% static 'images/shot_handshake.jpg' %}" alt="Handshake Story">
+    </div>
+    <div class="story-text">
+        <h2>Our Story</h2>
+        <p>
+            U.S. Man <strong>Linkon</strong> founded Butterfingers Bakery in 1982 with a vision 
+            to help our community by enabling people to build better lives for themselves and their families.  
+        </p>
+        <p>
+            From our humble beginnings as a pioneering social enterprise, we have been baking 
+            delicious brownies and pastries for all to enjoy — spreading love one bite at a time. 
+        </p>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fdfdfd;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    color: #16a085;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background: #16a085;
+    color: #fff;
+}
+
+
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}

@@ -1,8 +1,12 @@
 {% extends "patials\base.html" %}
-    
-{% block title %}
+{% load static %}
 
+{% block title %}
 {% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css\pricing.css' %}">
+{% endblock extra_css %}
 
 {% block body %}
     <h1>Our Services and Prices</h1>

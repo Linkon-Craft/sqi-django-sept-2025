@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    color: #2c3e50;
+}
+
+ul.testimonials {
+    width: 70%;
+    margin: 20px auto;
+    padding: 0;
+    list-style: none;
+    border: 1px blueviolet;
+}
+
+ul.testimonials li {
+    background: #fff;
+    border-left: 4px solid #16a085;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+ul.testimonials strong {
+    color: #2c3e50;
+}

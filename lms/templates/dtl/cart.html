@@ -1,4 +1,5 @@
 {% extends "partials\base.html" %}  
+{% load static %}
    
 {% block title %}
    Shopping Cart
@@ -47,7 +48,9 @@
     <!-- 5. Filters -->
     <p>Today is: {{ today|date:"l, j F Y" }}.</p>
     <p>Total different items in cart: {{ cart_items | length }}</p>
+    <img src="{% static 'img/road_image.jpeg' %}" alt="">
 {% endblock body %}
+
 
 {% block footer %}
 

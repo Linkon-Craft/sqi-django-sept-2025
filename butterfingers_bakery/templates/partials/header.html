@@ -1,0 +1,14 @@
+{% load static %}
+<header>
+    <link rel="stylesheet" href= "{% static 'css/base.css' %}">
+    <nav class="navbar">
+        <div class="logo">Butterfingers Bakery</div>
+        <ul class="nav-links">
+            <li><a href="{% url 'butterfinger:home' %}">Home</a></li>
+            <li><a href="{% url 'butterfinger:about'%}">About</a></li>
+            <li><a href="{% url 'butterfinger:menu' %}">Menu</a></li>
+            <li><a href="{% url 'butterfinger:contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>

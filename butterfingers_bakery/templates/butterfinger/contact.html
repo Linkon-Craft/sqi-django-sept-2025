@@ -1,0 +1,47 @@
+{% extends "partials/base.html" %}
+{% load static %}
+
+{% block title %}
+<title>Contact Us</title>
+{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+
+<section class="contact-hero">
+    <div class="contact-hero-content">
+        <img src="{% static 'images/butterfinger_logo.png' %}" alt="Butterfingers Logo">
+        <h1>Got An Idea, Request, or Question?<br>We'd Love To Hear From You.</h1>
+    </div>
+</section>
+
+
+<section class="contact-address">
+    <h2>Butterfingers Bakery</h2>
+    <p><strong>Address:</strong> 104 Alexander Street, Yonkers, NY 10701</p>
+</section>
+
+
+<section class="contact-info">
+    <div class="info-card">
+        <img src="{% static 'images/phone-call.png' %}" alt="Phone Icon">
+        <h3>Call Us</h3>
+        <p><strong>+1 (914) 375-1510</strong></p>
+    </div>
+
+    <div class="info-card">
+        <img src="{% static 'images/chat.png' %}" alt="Chat Icon">
+        <h3>Customer Service</h3>
+        <p><strong>sales@butterfingersbakery.com</strong></p>
+    </div>
+
+    <div class="info-card">
+        <img src="{% static 'images/chatting.png' %}" alt="Corporate Gift Icon">
+        <h3>Corporate Gift</h3>
+        <p><strong>corporate@butterfingersbakery.com</strong></p>
+    </div>
+</section>
+{% endblock content %}

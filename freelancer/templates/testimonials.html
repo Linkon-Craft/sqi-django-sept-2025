@@ -1,13 +1,19 @@
 {% extends "patials\base.html" %}
+{% load static %}
+
 {% block title %}
  
 {% endblock title %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css\testimonials.css' %}">
+{% endblock extra_css %}
+
 {% block body %}
     <h1>What Our Customers Say</h1>
-    <ul>
+    <ul class="testimonials ul">
         {% for name, message in testimonials.items %}
-            <li><strong>{{ name }}</strong>: "{{ message }}"</li>
+            <li class="testimonials li"><strong class="testimonials strong" >{{ name }}</strong>: "{{ message }}"</li>
         {% endfor %}
     </ul>
 {% endblock body %}

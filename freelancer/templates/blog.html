@@ -1,13 +1,19 @@
 {% extends "patials\base.html" %}
+{% load static %}
+
 
 {% block title  %}
 
 {% endblock title  %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css\blog.css' %}">
+{% endblock extra_css %}
+
 {% block body %}
     <h1>Our Blog</h1>
     {% for post in posts %}
-        <div style="border:1px solid #ddd; padding:10px; margin:10px 0;">
+        <div class="post">
             <h2>{{ post.title }}</h2>
             <p><em>By {{ post.author }} on {{ post.date }}</em></p>
             <p>{{ post.content }}</p>

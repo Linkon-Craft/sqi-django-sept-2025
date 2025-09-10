@@ -1,13 +1,18 @@
 {% extends "patials\base.html" %}
+{% load static %}
 
 {% block title %}
 
 {% endblock title %} 
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css\case_studies.css' %}">
+{% endblock extra_css %}
+
 {% block body %}
     <h1>Case Studies</h1>
     {% for study in studies %}
-        <div style="border:1px solid #ddd; padding:10px; margin:10px 0; background:#f9f9f9;">
+        <div class = "case-study">
             <h2>{{ study.title }}</h2>
             <p>{{ study.summary }}</p>
         </div>

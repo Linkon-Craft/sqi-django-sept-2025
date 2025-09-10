@@ -1,0 +1,98 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fffaf6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.about-hero {
+    background: url("../images/bakery_bg.jpg") center/cover no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.about-hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgb(255, 244, 230);
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.about-hero-content img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.about-hero-content h1 {
+    font-size: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #524f46;
+}
+
+/* Story Section */
+.about-story {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    gap: 30px;
+}
+
+.story-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.story-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.story-text h2 {
+    font-size: 1.8rem;
+    color: #d35400;
+    margin-bottom: 15px;
+}
+
+.story-text p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-story {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .story-image img {
+        max-width: 100%;
+    }
+
+    .about-hero h1 {
+        font-size: 1.5rem;
+    }
+}

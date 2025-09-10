@@ -1,0 +1,69 @@
+{% extends "partials/base.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title  %}
+<title>Butterfingers Bakery</title>
+{% endblock title  %}
+
+{% block extra_css %}
+<link rel="stylesheet" href= "{% static 'css/home.css' %}">
+{% endblock extra_css %}
+
+
+{% block extra_scripts %}
+<script src="{% static 'js/newsletter.js' %}" defer></script>
+{% endblock extra_scripts %}
+
+</head>
+{% block content %}
+<div class="hero">
+    <h1>Welcome to Butterfingers Bakery</h1>
+    <p>Freshly baked happiness, every single day!</p>
+    <a href="{% url 'butterfinger:menu' %}" class="btn">Explore Menu</a>
+</div>
+
+<div id="newsletter-popup" class="popup">
+    <div class="popup-content">
+        <span id="close-popup">&times;</span>
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get promotions and updates directly in your inbox!</p>
+        <form>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</div>
+<section class="about">
+    <h2>About Us</h2>
+    <p>At Butterfingers Bakery, we specialize in freshly baked bread, pastries, cakes, and more. 
+        Our passion is to bring warmth and sweetness to every table.</p>
+</section>
+
+<section class="menu">
+    <h2>Our Popular Items</h2>
+    <div class="menu-items">
+        <div class="card">
+            <img src="{% static 'images/artisan bread.jpg' %}" alt="Bread" >
+            <h3>Artisan Bread</h3>
+            <p>$849.99</p>
+        </div>
+        <div class="card">
+            <img src="{% static 'images/chocolate cake.jpg' %}" alt="cake" >
+            <h3>Chocolate Cake</h3>
+            <p>$2,199.99</p>
+        </div>
+        <div class="card">
+            <img src="{% static 'images/butter crosant.jpg' %}" alt="Croisant" >
+            <h3>Butter Croissant</h3>
+            <p>$1,199.99</p>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+</body>
+</html>

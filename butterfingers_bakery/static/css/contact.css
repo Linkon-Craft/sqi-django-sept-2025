@@ -1,0 +1,112 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fffaf6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.contact-hero {
+    background: #1f0e04;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.contact-hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-hero-content img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.contact-hero-content h1 {
+    font-size: 1.8rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Address Section */
+.contact-address {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact-address h2 {
+    font-size: 1.6rem;
+    color: #d35400;
+    margin-bottom: 10px;
+}
+
+/* Info Cards */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 10%;
+}
+
+.info-card {
+    background: #fff;
+    padding: 25px;
+    text-align: center;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.info-card img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 1.3rem;
+    }
+
+    .info-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}

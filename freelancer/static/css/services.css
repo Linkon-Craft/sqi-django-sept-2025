@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    color: #34495e;
+}
+
+ul.services-list {
+    width: 60%;
+    margin: 20px auto;
+    padding: 0;
+    list-style: none;
+}
+
+ul.services-list li {
+    background: #fff;
+    padding: 12px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+ul.services-list li:hover {
+    background: #f1f1f1;
+}

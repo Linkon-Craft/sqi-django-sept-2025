@@ -1,0 +1,98 @@
+{% extends "partials/base.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
+<title>Menu</title>
+{% endblock title %} 
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/menu.css' %}">
+{% endblock extra_css %}
+
+{% block extra_scripts %}
+<script src="{% static 'js/menu-search.js' %}" defer></script>
+{% endblock extra_scripts %}
+</head>
+
+{% block content %}
+
+
+<nav>
+    <ul>
+        <li><a href="">Bread</a></li>
+        <li><a href="">Pastry</a></li>
+        <li><a href="">Fine Pastry & Sweet Rolls</a></li>
+        <li><a href="">Burek</a></li>
+        <li><a href="">Sandwiches</a></li>
+        <li><a href="">Pizzas</a></li>
+        <li><a href="">Salads & Yogurts</a></li>
+        <li><a href="">Packaged Products</a></li>
+    </ul>
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+</nav>
+
+
+<section class="products">
+    <div class="pro">
+        <img src="{% static 'images/Bread.jpg' %}" alt="">
+        <h3>Bread</h3>
+        <a href="#"><span>Find out more</span></a>
+    </div>
+
+    <div class="pro">
+        <img src="{% static 'images/Pastries.jpg' %}" alt="">
+        <h3>Pastry</h3>
+        <a href="#"><span>Find out more</span></a>
+    </div>
+
+    <div class="pro">
+        <img src="{% static 'images/Fine pastries & sweet_roles.jpg' %}" alt="">
+        <h3>Fine Pastry & Sweet Rolls</h3>
+        <a href="#"><span>Find out more</span></a>
+    </div>
+
+    <div class="pro">
+        <img src="{% static 'images/Burek.jpg' %}" alt="">
+        <h3>Burek</h3>
+        <a href="#"><span>Find out more</span></a>
+    </div>
+
+    <div class="pro">
+        <img src="{% static 'images/sandwiches.jpg' %}" alt="">
+        <h3>Sandwiches</h3>
+        <a href="#"><span>Find out more</span></a>
+    </div>
+
+    <div class="pro">
+        <img src="{% static 'images/pizza.jpg' %}" alt="">
+        <h3>Pizzas</h3>
+        <a href="#"><span>Find out more</span></a>
+    </div>
+
+    <div class="pro">
+        <img src="{% static 'images/salad & yoghort.jpg' %}" alt="">
+        <h3>Salads & Yogurts</h3>
+        <a href="#"><span>Find out more</span></a>
+    </div>
+
+    <div class="pro">
+        <img src="{% static 'images/salad & yoghort.jpg' %}" alt="">
+        <h3>Packaged Products</h3>
+        <a href="#"><span>Find out more</span></a>
+    </div>
+</section>
+
+{% endblock content %}
+</body>
+</html>
